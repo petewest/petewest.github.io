@@ -65,7 +65,7 @@ As we used sudo your `.pem` files are owned by root, so you might want to tidy t
 3. Install the package: `sudo dpkg -i chefdk*.deb`
 4. Create a folder for all your chef files: `chef generate repo chef-repo`
 5. We need to create a config file and populate it with data.
-	This assumes your chef `username` set above matches your workstation username, if not,
+	This assumes your chef `<username>` set above matches your workstation username, if not,
 	change the ``chef_user = `whoami`.chomp`` line below to `chef_user = '<username>'`
 
 		cd chef-repo
@@ -79,7 +79,7 @@ As we used sudo your `.pem` files are owned by root, so you might want to tidy t
 7. If you're adding your `chef-repo` to source control remember to
 	add an ignore rule for `.chef/*.pem` (e.g.
 	`echo '.chef/*.pem' >> ~/chef-repo/.gitignore` for git)
-8. With your favourite text editor, create a file called knife.rb
+8. With your favourite text editor, create a file called `knife.rb`
 	with the following (not forgetting to replace `<organisation>`):
 
 {% highlight ruby %}
