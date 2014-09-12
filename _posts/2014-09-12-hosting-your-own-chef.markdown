@@ -70,6 +70,7 @@ As we used sudo your `.pem` files are owned by root, so you might want to tidy t
 
 		cd chef-repo
 		mkdir .chef
+		cd .chef
 
 6. Copy your certificates from the server to your new folder:
 
@@ -80,11 +81,13 @@ As we used sudo your `.pem` files are owned by root, so you might want to tidy t
 	add an ignore rule for `.chef/*.pem` (e.g.
 	`echo '.chef/*.pem' >> ~/chef-repo/.gitignore` for git)
 8. With your favourite text editor, create a file called `knife.rb`
-	with the following (not forgetting to replace `<organisation>`):
+	inside your .chef folder with the following (not forgetting to replace
+	`<organisation>`):
 
 {% highlight ruby %}
 chef_user = `whoami`.chomp
 current_folder = File.dirname(__FILE__)
+# Replace <organisation> here
 organisation = '<organisation>'
 log_level :info
 log_location STDOUT
