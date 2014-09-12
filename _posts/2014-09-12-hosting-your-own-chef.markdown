@@ -91,7 +91,7 @@ log_location STDOUT
 node_name chef_user
 client_key "#{current_folder}/#{chef_user}.pem"
 validation_client_name "#{organisation}-validator"
-validation_client_key "#{organisation}-validator.pem"
+validation_client_key "#{current_folder}/#{organisation}-validator.pem"
 chef_server_url "https://chefserver/organizations/#{organisation}"
 cookbook_path ["#{current_folder}/../cookbooks"]
 {% endhighlight %}
