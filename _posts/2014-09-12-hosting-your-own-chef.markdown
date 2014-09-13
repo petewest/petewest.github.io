@@ -64,10 +64,8 @@ As we used sudo your `.pem` files are owned by root, so you might want to tidy t
 2. Download the [development kit][dev_kit]
 3. Install the package: `sudo dpkg -i chefdk*.deb`
 4. Create a folder for all your chef files: `chef generate repo chef-repo`
-5. We need to create a config file and populate it with data.
-	This assumes your chef `<username>` set above matches your workstation username, if not,
-	change the ``chef_user = `whoami`.chomp`` line below to `chef_user = '<username>'`
-
+5. Create the folder for certificates and config data:
+	
 		cd chef-repo
 		mkdir .chef
 		cd .chef
@@ -82,7 +80,9 @@ As we used sudo your `.pem` files are owned by root, so you might want to tidy t
 	`echo '.chef/*.pem' >> ~/chef-repo/.gitignore` for git)
 8. With your favourite text editor, create a file called `knife.rb`
 	inside your .chef folder with the following (not forgetting to replace
-	`<organisation>`):
+	`<organisation>`).
+	This assumes your chef `<username>` matches your workstation username, if not,
+	change the ``chef_user = `whoami`.chomp`` line below to `chef_user = '<username>'`
 
 {% highlight ruby %}
 chef_user = `whoami`.chomp
@@ -108,7 +108,7 @@ Test your install by listing the users and nodes on your new server:
 The user list should show your `<username>`, and the node list should
 currently be blank, but neither should error.
 
-That's it!  Your server and workstation are now configured and you can carry on with the [tutorials][]
+That's it!  Your server and workstation are now configured and you can carry on with the [tutorials][].
 
 
 [Chef]: http://getchef.com
