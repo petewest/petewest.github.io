@@ -10,3 +10,4 @@ github_username:  petewest
 
 # Build settings
 markdown: kramdown
+permalink: pretty
