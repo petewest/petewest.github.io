@@ -77,14 +77,14 @@ end
 {% endhighlight %}
 
 {% highlight ruby %}
-# with_library/recipe/default.rb
+# with_library/recipes/default.rb
 Chef::Recipe.send(:include, WithLibrary::Helper)
 puts "with_library #{ self }: #{ self.methods.grep(/example/) }"
 example_method
 {% endhighlight %}
 
 {% highlight ruby %}
-# without_library/recipe/default.rb
+# without_library/recipes/default.rb
 puts "without_library #{ self }: #{ self.methods.grep(/example/) }"
 example_method
 {% endhighlight %}
@@ -129,14 +129,14 @@ end
 {% endhighlight %}
 
 {% highlight ruby %}
-# with_library/recipe/default.rb
+# with_library/recipes/default.rb
 self.extend(WithLibrary::Helper)
 puts "with_library #{ self }: #{ self.methods.grep(/example/) }"
 example_method
 {% endhighlight %}
 
 {% highlight ruby %}
-# without_library/recipe/default.rb
+# without_library/recipes/default.rb
 puts "without_library #{ self }: #{ self.methods.grep(/example/) }"
 # Don't call example_method here as it doesn't exist!
 # example_method
