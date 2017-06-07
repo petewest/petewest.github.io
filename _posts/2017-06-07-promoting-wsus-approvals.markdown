@@ -71,5 +71,5 @@ sub-group approval.
 	}
 	```
 
-All update approvals have now been moved and should roll out to everyone the
-next time they check in to WSUS.
+All update approvals have now been moved and should roll out to every computer
+the next time they check in to WSUS.
