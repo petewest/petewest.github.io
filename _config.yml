@@ -4,7 +4,7 @@ email: tech@petewest.org
 description: >
   Info I might find useful later on that I won't remember.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://tech.petewest.org" # the base hostname & protocol for your site
+url: "https://tech.petewest.org" # the base hostname & protocol for your site
 twitter_username: pistolpeet
 github_username:  petewest
 
